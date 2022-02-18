@@ -1,30 +1,19 @@
-/*--header--*/
-.header {
-    background: $color-white;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0px 1px 5px 0px $color-black;
-    width: 100%;
-    &__arrow {
-        position: absolute;
-        top: 15px;
-        left: 15px;
+/*-- header --*/
+header {
+    
+    @extend %grid-center;
+    @include grid-template-set ($header);
+    padding: 1em;
+    
+    & h1 {
+        @include grid-pos-set(1, auto , 1, auto);
+        font-family: 'Shrikhand', cursive;
     }
-    &__logo {
-        margin: 10px 0;
-        & img{
-            max-width: 150px;
-            height: auto;
-            @include tablette-only {
-                width: 400px;
-                background-color: rgb(82, 72, 212);
-            }
-            @include mobile-only {
-                width: 300px;
-                background-color: rgb(65, 216, 85);
-            }
-        }
+
+    .btn__retourHome{
+        @include grid-pos-set(1, auto , 1, auto);
+        justify-self: start;
     }
-     
 }
+/*-- Fin Header --*/
 

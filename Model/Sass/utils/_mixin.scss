@@ -1,12 +1,16 @@
-@mixin tablette-only {
-    @media all and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
-        @content;
+@mixin grid-template-set($section){
+    @if ($section == "header") {
+        $section: $grid-columns-header;
+    } @else if ($section == "localisation"){
+        $section: $grid-columns-localisation;
+    } @else if ($section == "presentation"){
+        $section: $grid-columns-presentation;
     }
+
+    grid-template-columns: repeat($section, 1fr);
 }
 
-@mixin mobile-only {
-    @media all and (max-width: map-get($breakpoints, mobile)) {
-        @content;
-    }
+@mixin grid-pos-set($row-start, $row-end, $col-start, $col-end){
+    grid-row: $row-start unquote("/") $row-end;
+    grid-column: $col-start unquote("/") $col-end;
 }
-

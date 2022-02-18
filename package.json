@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./Model/Sass/main.scss:./Model/Css/main.css"
+    "sass": "sass --watch Model/Sass/main.scss:Model/Css/main.css --no-source-map",
+    "prefix": "postcss Model/Css/main.css --use autoprefixer"
   },
   "author": "",
   "license": "ISC"

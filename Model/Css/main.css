@@ -1,65 +1,52 @@
-body {
-  box-sizing: border-box;
-  background: white;
-  margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+main .presentation, main .localisation, header {
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 
-/*font-family: 'Shrikhand', cursive;*/
-/*font-family: 'Roboto', sans-serif;*/
-/*--header--*/
-.header {
-  background: white;
-  display: flex;
-  justify-content: center;
-  box-shadow: 0px 1px 5px 0px black;
-  width: 100%;
+/*-- header --*/
+header {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 1em;
 }
-.header__arrow {
-  position: absolute;
-  top: 15px;
-  left: 15px;
+header h1 {
+  grid-row: 1 / auto;
+  grid-column: 1 / auto;
+  font-family: "Shrikhand", cursive;
 }
-.header__logo {
-  margin: 10px 0;
-}
-.header__logo img {
-  max-width: 150px;
-  height: auto;
-}
-@media all and (min-width: 768px) and (max-width: 992px) {
-  .header__logo img {
-    width: 400px;
-    background-color: #5248d4;
-  }
-}
-@media all and (max-width: 768px) {
-  .header__logo img {
-    width: 300px;
-    background-color: #41d855;
-  }
+header .btn__retourHome {
+  grid-row: 1 / auto;
+  grid-column: 1 / auto;
+  justify-self: start;
 }
 
-/*--Search city--*/
-.city {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  background-color: gainsboro;
+/*-- Fin Header --*/
+main {
+  font-family: "Roboto", sans-serif;
+  /* Debut section localisation */
+  /* Fin section localisation */
+  /* Debut section presentation */
+  /* Fin section presentation */
 }
-.city__form {
-  padding: 5px 0;
+main .localisation {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 1em;
+  background: #eaeaea;
+  background: linear-gradient(180deg, rgba(173, 173, 173, 0.35) 0%, rgba(234, 234, 234, 0.75) 15%, #eaeaea 100%);
 }
-.city__form label {
-  margin: 0 10px;
+main .localisation i {
+  padding: 0 0.5em 0 0;
 }
-.city__form input {
-  background-color: gainsboro;
-  border: none;
-  padding: 10px 0;
+main .presentation {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 2em 0 3em;
+  background: #f6f6f6;
+  text-align: center;
 }
-.city__form input:focus {
-  outline: none;
+main .presentation h2 {
+  padding: 0 5em;
 }
-
-/*# sourceMappingURL=main.css.map */
+main .presentation p {
+  padding: 1em 5em 2em;
+}

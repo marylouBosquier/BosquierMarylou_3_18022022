@@ -1,13 +1,38 @@
-//Color
 
+//Couleurs principales
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+
+//Couleur secondaires
+$vert-clair: #99e2d0;
+$gris-sombre: #353535;
+$gris-clair: #e2e2e2;
 $color-white: rgb(255,255,255);
 $color-black: rgb(0,0,0);
-//Media queries
 
-$breakpoints: (
-    mobile: 768px,
-    tablette: 992px
-);
+//Textes
+$txt-fond-clair: #000000;
+$txt-fond-sombre: #ffffff;
+$txt-fond-vert: #008766;
+
+
+//Media queries
+$breakpoints-tablette: 992px;
+$breakpoints-mobile: 768px;
+
+//Sections
+$header: "header";
+$localisation: "localisation";
+$presentation: "presentation";
+$commentCaMarche: "commentCaMarche";
+$lesRestaurants: "lesRestaurants";
+$footer: "footer";
+
+//Positionnement
+$grid-columns-header: 1;
+$grid-columns-localisation: 1;
+$grid-columns-presentation: 1;
+$grid-columns-commentCaMarche: 3;
+$grid-columns-lesRestaurants: 4;
+$grid-columns-footer: 3;

@@ -1,9 +1,49 @@
 @import "./utils/mixin";
 @import "./utils/variables";
-
-@import "./base/base";
-@import "./base/typography";
+@import "./utils/components";
+@import "./utils/placeholders";
 
 @import "./layout/header";
+@import "./layout/footer";
 
-@import "./pages/form";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+
+
+main{
+
+    font-family: 'Roboto', sans-serif;
+
+    /* Debut section localisation */
+    & .localisation {
+        @extend %grid-center;
+        @include grid-template-set ($localisation);
+        padding: 1em;
+        background: #eaeaea;
+        background: linear-gradient(
+            180deg,
+                rgba(173,173,173,.35) 0%,
+                rgba(234,234,234,.75) 15%,
+                rgba(234,234,234,1) 100%); 
+        & i {
+            padding: 0 0.5em 0 0;
+        }
+    }
+    /* Fin section localisation */
+    
+    /* Debut section presentation */
+    .presentation {
+        @extend %grid-center;
+        @include grid-template-set ($presentation);
+        padding: 2em 0 3em;
+        background: #f6f6f6;
+        text-align: center;
+
+        & h2 {
+            padding: 0 5em;
+        }
+        & p {
+            padding: 1em 5em 2em;
+        }
+    }
+    /* Fin section presentation */
+}

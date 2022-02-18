@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <title>Ohmyfood</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Model/Css/normalize.css"/>
   <link rel="stylesheet" href="Model/Css/main.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/e79bcae60f.js" crossorigin="anonymous"></script>
@@ -12,24 +11,33 @@
 
 <body>
   
-  <header class="header">
-    <a href="#" class="header__logo">
-      <img src="Model/Img/Logo/ohmyfood.svg" alt="Logo ohmyfood"/>
-    </a>
+  <header>
+    <h1>Ohmyfood</h1>
   </header>
   
   <main>
-    <section class="city">
-      <form role="search" class="city__form">
-        <label for="search">
-          <i class="fas fa-map-marker-alt"></i>
-        </label>
-        <input type="search" name="search" id="search" placeholder="Ex : Paris, Belleville" Required/>
-      </form>
+    <!-- Début de la section localisation -->
+    <section class="localisation">
+        <h2><i class="fas fa-map-marker-alt"></i>Paris, Belleville</h2>
     </section>
-    <section>
+    <!-- Fin de la section localisation -->
+
+    <!-- Début de la section presentation -->
+    <section class="presentation">
+      <h2>Réservez le menu qui vous convient</h2>
+      <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+      <a class="btn btn--gradient btn--radius" href="#">Explorer nos restaurants</a>
+    </section>
+    <!-- Fin de la section presentation -->
+
+    <section class="commentCaMarche">
 
     </section>
+
+    <section class="lesRestaurants">
+      
+    </section>
+
   </main>
 
   <footer>
