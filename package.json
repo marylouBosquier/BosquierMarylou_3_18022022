@@ -1,0 +1,11 @@
+{
+  "name": "p3_bosquier_marylou",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./Model/Sass/main.scss:./Model/Css/main.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

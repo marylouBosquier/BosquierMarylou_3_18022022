@@ -1,0 +1,12 @@
+@mixin tablette-only {
+    @media all and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablette)) {
+        @content;
+    }
+}
+
+@mixin mobile-only {
+    @media all and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+
