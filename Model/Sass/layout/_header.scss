@@ -3,11 +3,24 @@ header {
     
     @extend %grid-center;
     @include grid-template-set ($header);
-    padding: 1em;
+    padding: 10px;
+    @media screen and (max-width: $breakpoints-tablette) {
+        padding: 15px;
+    }
+    @media screen and (max-width: $breakpoints-mobile) {
+        padding: 20px 15px 10px;    
+    } 
     
     & h1 {
         @include grid-pos-set(1, auto , 1, auto);
         font-family: 'Shrikhand', cursive;
+        font-size: x-large;
+        @media screen and (max-width: $breakpoints-tablette) {
+            font-size: xx-large;
+        }
+        @media screen and (max-width: $breakpoints-mobile) {
+            font-size: xx-large;    
+        }    
     }
 
     .btn__retourHome{

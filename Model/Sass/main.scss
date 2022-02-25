@@ -14,18 +14,32 @@ main{
     font-family: 'Roboto', sans-serif;
 
     /* Debut section localisation */
-    & .localisation {
+    .localisation {
         @extend %grid-center;
         @include grid-template-set ($localisation);
-        padding: 1em;
-        background: #eaeaea;
+        padding: 20px;
+        font-size: 11px;
         background: linear-gradient(
             180deg,
                 rgba(173,173,173,.35) 0%,
                 rgba(234,234,234,.75) 15%,
-                rgba(234,234,234,1) 100%); 
+                rgba(234,234,234,1) 100%);
+        @media screen and (max-width: $breakpoints-tablette) {
+            padding: 15px;
+        }
+        @media screen and (max-width: $breakpoints-mobile) {
+            padding: 15px; 
+            
+        }  
         & i {
-            padding: 0 0.5em 0 0;
+            padding: 0 10px 0 0;
+            font-size: large;
+            @media screen and (max-width: $breakpoints-tablette) {
+               font-size: medium;
+            }
+            @media screen and (max-width: $breakpoints-mobile) {
+               font-size: medium;  
+            } 
         }
     }
     /* Fin section localisation */
@@ -34,16 +48,169 @@ main{
     .presentation {
         @extend %grid-center;
         @include grid-template-set ($presentation);
-        padding: 2em 0 3em;
-        background: #f6f6f6;
+        padding: 20px 0 35px;
+        background: $txt-fond-grisclair;
         text-align: center;
 
         & h2 {
-            padding: 0 5em;
+            padding: 0 15px;
+            font-size: x-large;
+            @media screen and (max-width: $breakpoints-tablette) {
+               margin: 25px 25px 0;
+            }
+            @media screen and (max-width: $breakpoints-mobile) { 
+                margin: 25px 50px 0 30px;   
+            } 
         }
         & p {
-            padding: 1em 5em 2em;
+            color: $gris-sombre;
+            padding: 20px 20px 30px;
+            @media screen and (max-width: $breakpoints-tablette) {
+                font-size: large;
+             }
+             @media screen and (max-width: $breakpoints-mobile) { 
+                 font-size: large;   
+             } 
         }
     }
     /* Fin section presentation */
+    
+    /* Debut section Fonctionnement */
+    .operation {
+        display: grid;
+        margin: 60px 0;
+        @include grid-template-set ($operation);
+        & h2 {
+            font-size: large;
+            font-weight: bold;
+            padding: 0px 25px 20px;
+            @media screen and (max-width: $breakpoints-tablette) {
+                font-size: x-large;
+            }
+            @media screen and (max-width: $breakpoints-mobile) {
+                font-size: x-large;
+            } 
+        }
+        & ul {
+            @extend %grid-center;
+            @include grid-template-set (3);            
+            
+            @media screen and (max-width: $breakpoints-tablette) {
+                @include grid-template-set (1);
+                gap: 30px;
+            }
+            @media screen and (max-width: $breakpoints-mobile) {
+                @include grid-template-set (1);
+                gap: 35px;   
+            }   
+            & li {
+                display: grid;
+                grid-template-rows: repeat(1, 1fr);
+                grid-template-columns: 10% 15% auto;
+                text-align: left;
+                align-items: center;
+                font-size: medium;
+                font-weight: bold;
+                width: 84%;
+                padding: 25px 0;
+                box-shadow: 0px 5px 4px 0px rgba(53,53,53,0.1);   
+                background-color: $color-white;
+                border-radius: 20px;
+                & .num {
+                    position: relative;
+                    top: auto;
+                    right: 12px;
+                    .circle-num {
+                        background-color: $color-primary;
+                        color: $color-white;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: small;
+                        border-radius: 45%;
+                        padding: 6px 9px;
+                    }
+                }        
+                & .icon {
+                    color: lighten($gris-sombre,50);
+                    padding-left: 8px;
+                    font-size: large;
+                }
+            }  
+            & .color_fond {
+                background-color: rgba(147,86,220,0.1);
+                & .icon {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+    /* Fin section fonctionnement */
+
+    /* Début section restaurants */
+    .restaurants {
+        @extend %grid-center;
+        @include grid-template-set (1);
+        background: $txt-fond-grisclair;
+        padding: 50px 15px;
+        & h2 {
+            @include grid-pos-set (1, auto, 1, 2);
+            justify-self: start;
+        }
+        & ul {
+            @include grid-pos-set (2, auto, 1, 5);
+            display: grid;
+            @include grid-template-set ($restaurants);
+            grid-gap: 20px;
+            justify-self: normal;
+            margin: 30px 0;
+            @media screen and (max-width: $breakpoints-tablette) {
+                @include grid-pos-set (2, auto, 1, 3);
+                @include grid-template-set (2);
+            }
+            @media screen and (max-width: $breakpoints-mobile) {
+                @include grid-pos-set (2, auto, 1, 2);
+                @include grid-template-set (1);  
+            }
+            & li {
+                display: inline-block;
+                width: 100%;
+
+                & a {
+                    display: block;
+                    position: relative;
+                    padding: 0 0 10px 0;
+                    color: $color-black;
+                    border-radius: 20px;
+                    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
+        
+                    & .level {
+                        position: absolute;
+                        right: 16px;
+                        top: 16px;
+                        padding: 8px 7px;
+                        color: $txt-fond-vert;
+                        background: $vert-clair;
+                        border-radius: 4px;
+                    }
+                    & img {
+                        padding: 0 0 8px 0;
+                        width: 100%;
+                        height: 180px;
+                        object-fit: cover;
+                        border-radius: 20px 20px 0 0;
+                    }
+                    & h3, p {
+                        padding: 0 16px 8px;
+                    }
+                    & .btn__heart {
+                        position: absolute;
+                        bottom: 40px;
+                        right: 24px;
+                        font-size: 22px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    } 
+    /*Fin section restaurants */
 }

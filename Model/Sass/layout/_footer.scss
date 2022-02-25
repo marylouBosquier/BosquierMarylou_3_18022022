@@ -1,0 +1,41 @@
+/*-- footer --*/
+footer {
+    
+    display: grid;
+    @include grid-template-set ($footer);
+    background-color: $gris-sombre;
+    
+    padding:20px 0 30px 30px;
+    @media screen and (max-width: $breakpoints-tablette) {
+        @include grid-template-set (2);
+    }
+    @media screen and (max-width: $breakpoints-mobile) {
+        @include grid-template-set (2);
+    } 
+    
+    
+    & h2 {
+        font-size: large;
+        font-weight: 400;
+        font-family: 'Shrikhand', cursive;
+        grid-column: 1/1;
+        margin-bottom: 20px;
+        color: $color-white;      
+    }
+    & ul {
+        grid-column: 1/1; 
+        
+        & a {
+            line-height: 1.8;
+            font-family: 'Roboto', sans-serif;
+            color: $color-white;
+            & .footer__icon {
+                font-size: small;
+                padding-right: 10px;
+            }
+            
+        }       
+    }
+   
+}
+/*-- Fin footer --*/

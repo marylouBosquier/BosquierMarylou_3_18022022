@@ -5,7 +5,13 @@
         $section: $grid-columns-localisation;
     } @else if ($section == "presentation"){
         $section: $grid-columns-presentation;
-    }
+    } @else if ($section == "operation"){
+        $section: $grid-columns-operation;
+    } @else if ($section == "restaurants"){
+        $section: $grid-columns-restaurants;
+    } @else if ($section == "footer"){
+        $section: $grid-columns-footer;
+    } 
 
     grid-template-columns: repeat($section, 1fr);
 }

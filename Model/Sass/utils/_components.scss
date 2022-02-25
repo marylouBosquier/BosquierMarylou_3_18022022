@@ -1,15 +1,54 @@
-
 .btn{
-
-
-
+    padding: 15px 22px;
+    color: $txt-fond-grisclair;
+    transition: 250ms;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     &--gradient{
-
+        background-image: 
+            radial-gradient(
+            100% 50% at 20% 10%,
+            $color-secondary 0%,
+            $color-primary 200%);
     }
     &--radius{
+        border-radius: 25px;
+    }
+    &:hover{  
+        opacity: 0.8;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }    
+}
+
+.btn__heart {
+    & .heart-back{
+        display: block;
+        transform: scale(1);
+        transition: all 0.5s;
+    }
+    & .heart-hover {
+        display: block;
+        position: absolute;
+        top: 0;
+        transform: scale(0);
+        transition: all 0.5s;
+        background-color: $color-black;
+        background-image: linear-gradient(0deg, $color-secondary, $color-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+}
+
+
+.btn__heart:hover {
+    & .heart-back {
+        opacity: 0;
+        transform: scale(0);
 
     }
-    &:hover{
-        
+    & .heart-hover {
+        opacity: 1;
+        transform: scale(1);
     }
 }

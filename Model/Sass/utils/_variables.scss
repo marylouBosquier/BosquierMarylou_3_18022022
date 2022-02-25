@@ -1,8 +1,8 @@
 
 //Couleurs principales
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: hsl(165, 56%, 74%);
 
 //Couleur secondaires
 $vert-clair: #99e2d0;
@@ -12,27 +12,28 @@ $color-white: rgb(255,255,255);
 $color-black: rgb(0,0,0);
 
 //Textes
-$txt-fond-clair: #000000;
-$txt-fond-sombre: #ffffff;
+$txt-fond-grisclair:#f6f6f6;
+$txt-fond-gris:#eaeaea;
 $txt-fond-vert: #008766;
 
 
-//Media queries
+//Media queries 
 $breakpoints-tablette: 992px;
-$breakpoints-mobile: 768px;
+$breakpoints-mobile:  690px;
+
 
 //Sections
 $header: "header";
 $localisation: "localisation";
 $presentation: "presentation";
-$commentCaMarche: "commentCaMarche";
-$lesRestaurants: "lesRestaurants";
+$operation: "operation";
+$restaurants: "restaurants";
 $footer: "footer";
 
 //Positionnement
 $grid-columns-header: 1;
 $grid-columns-localisation: 1;
 $grid-columns-presentation: 1;
-$grid-columns-commentCaMarche: 3;
-$grid-columns-lesRestaurants: 4;
+$grid-columns-operation: 1;
+$grid-columns-restaurants: 4;
 $grid-columns-footer: 3;
