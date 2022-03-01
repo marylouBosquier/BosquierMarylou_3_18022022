@@ -1,6 +1,5 @@
 /*-- header --*/
 header {
-    
     @extend %grid-center;
     @include grid-template-set ($header);
     padding: 10px;
@@ -10,7 +9,6 @@ header {
     @media screen and (max-width: $breakpoints-mobile) {
         padding: 20px 15px 10px;    
     } 
-    
     & h1 {
         @include grid-pos-set(1, auto , 1, auto);
         font-family: 'Shrikhand', cursive;
@@ -22,11 +20,9 @@ header {
             font-size: xx-large;    
         }    
     }
-
-    .btn__retourHome{
+    .btn__home{
         @include grid-pos-set(1, auto , 1, auto);
         justify-self: start;
     }
 }
 /*-- Fin Header --*/
-

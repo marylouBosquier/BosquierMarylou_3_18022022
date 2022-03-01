@@ -20,3 +20,16 @@
     grid-row: $row-start unquote("/") $row-end;
     grid-column: $col-start unquote("/") $col-end;
 }
+
+@mixin menu__open($dur, $delay) {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #f4f9f8;
+    transform-origin: top left;
+    animation: menu $dur $delay both;
+    z-index: -1;
+}

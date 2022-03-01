@@ -2,25 +2,26 @@
 //Couleurs principales
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
-$color-tertiary: hsl(165, 56%, 74%);
+$color-tertiary: #99E2D0;
+$color-white: rgb(255, 255, 255);
+$color-black: rgb(0,0,0);
 
 //Couleur secondaires
 $vert-clair: #99e2d0;
 $gris-sombre: #353535;
 $gris-clair: #e2e2e2;
-$color-white: rgb(255,255,255);
-$color-black: rgb(0,0,0);
 
 //Textes
 $txt-fond-grisclair:#f6f6f6;
 $txt-fond-gris:#eaeaea;
 $txt-fond-vert: #008766;
 
+//Soulignement titre
+$border-titre: 48px;
 
 //Media queries 
 $breakpoints-tablette: 992px;
 $breakpoints-mobile:  690px;
-
 
 //Sections
 $header: "header";
@@ -37,3 +38,6 @@ $grid-columns-presentation: 1;
 $grid-columns-operation: 1;
 $grid-columns-restaurants: 4;
 $grid-columns-footer: 3;
+
+//Nombre de plats
+$nb-plats : 10;
