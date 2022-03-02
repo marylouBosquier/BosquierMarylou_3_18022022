@@ -20,7 +20,11 @@
     &--radius{
         border-radius: 25px;
     }
-    &:hover{  
+    &:hover {  
+        opacity: 0.8;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }    
+    &:active{  
         opacity: 0.8;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }    
@@ -48,7 +52,18 @@
 }
 
 
-.btn__heart:hover, button:hover {
+.btn__heart:hover, button:hover{
+    & .heart-back {
+        opacity: 0;
+        transform: scale(0);
+
+    }
+    & .heart-hover {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.btn__heart:active, button:active {
     & .heart-back {
         opacity: 0;
         transform: scale(0);

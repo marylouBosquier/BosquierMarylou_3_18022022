@@ -24,5 +24,8 @@ header {
         @include grid-pos-set(1, auto , 1, auto);
         justify-self: start;
     }
+    .fa-arrow-left:hover, .fa-arrow-left:active {
+        color: $color-black;
+    }
 }
 /*-- Fin Header --*/

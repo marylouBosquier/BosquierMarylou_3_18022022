@@ -7,10 +7,10 @@ footer {
     
     padding: 20px 0 30px 30px;
     @media screen and (max-width: $breakpoints-tablette) {
-        @include grid-template-set (2);
+        @include grid-template-set (1);
     }
     @media screen and (max-width: $breakpoints-mobile) {
-        @include grid-template-set (2);
+        @include grid-template-set (1);
     } 
     
     
