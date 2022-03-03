@@ -1,3 +1,4 @@
+/* réutilisable */
 .menu__list{
 	padding: 24px 16px;
 	text-align: left;
@@ -5,6 +6,7 @@
 	box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
 }
 
+/* Bouton principal */
 .btn{
     padding: 15px 22px;
     color: $txt-fond-grisclair;
@@ -30,6 +32,7 @@
     }    
 }
 
+/* bouton j'aime */
 .btn__heart, button {
     & .heart-back{
         display: block;

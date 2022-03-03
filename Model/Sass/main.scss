@@ -7,84 +7,82 @@
 @import "./layout/footer";
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
-
-.loading {
-    display: block;
-   opacity: 1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 20;
-    text-align: center;  
-    font-family: 'Shrikhand', sans-serif;
-    animation: 1s ease 2s both fond;
-    
-   
-    &__fond {
-        display: inline-block;
-        height: 1px;
-        margin-top: 200px;
-        position: relative; 
-    }
-    .loading-line {
-        animation: 2s ease both line;
-        background-color: darken($color-secondary, 20%);
-        color: darken($color-primary, 10%);
-        border-radius: 20px;
-        display: inline-block;
-        height: 100%;
-        opacity: 0;
-        transform: scale(1);
-        vertical-align: top;
-        width: 22px;
-        @media screen and (max-width: $breakpoints-tablette) {
-            width: 19px;
+/* Debut loader */
+body {
+    .loading {
+        display: block;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 20;
+        text-align: center;  
+        font-family: 'Shrikhand', sans-serif;
+        animation: 1s ease 2s both fond;
+        &__fond{
+            margin-top: 200px;
+            position: relative; 
+            display: inline-block;
+            height: 1px;
         }
-        @media screen and (max-width: $breakpoints-mobile) {
-            width: 17px; 
-            
-        }
-    }
-    @for $i from 1 through 16 {
-        $time: $i * 0.03s;
-        .loading-line:nth-child(#{$i}) {
-            animation-delay: $time;
-        }
-    }
-    
-    @keyframes fond {
-        from {
-            background: white; 
-            min-height: 1723.6px;
-            height: 2337.02px;
-        }
-        to {
-            background: white;
-           opacity: 0;
-        }
-    }
-    @keyframes line {
-        0% { 
-            transform: scale(1);
-        }
-        50% {
-            background-color: $color-primary;
-            opacity: 1;
-            transform: scale(3);
-        }
-        100% {
-            transform: scale(1);
+        .loading-line {
+            animation: 2s ease both line;
+            background-color: darken($color-secondary, 20%);
+            color: darken($color-primary, 10%);
+            border-radius: 20px;
+            display: inline-block;
+            height: 100%;
             opacity: 0;
+            transform: scale(1);
+            vertical-align: top;
+            width: 22px;
+            @media screen and (max-width: $breakpoints-tablette) {
+                width: 19px;
+            }
+            @media screen and (max-width: $breakpoints-mobile) {
+                width: 17px;
+            }
+        }
+        @for $o from 1 through 16 {
+            $time: $o * 0.03s;
+            .loading-line:nth-child(#{$o}) {
+                animation-delay: $time;
+            }
+        }
+        @keyframes fond {
+            from {
+                background: $color-white; 
+                min-height: 1723.6px;
+                height: 2337.02px;
+            }
+            to {
+                background: $color-white;
+                opacity: 0;
+            }
+        }
+        @keyframes line {
+            0% { 
+                transform: scale(1);
+            }
+            50% {
+                background-color: $color-primary;
+                opacity: 1;
+                transform: scale(3);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
         }
     }
-}
-
+    
+}/* Fin loader */
 main{
     
     font-family: 'Roboto', sans-serif;
-
-    /* Debut section localisation */
+    
+    // Debut section localisation 
     .localisation {
         @extend %grid-center;
         @include grid-template-set ($localisation);
@@ -106,16 +104,16 @@ main{
             padding: 0 10px 0 0;
             font-size: large;
             @media screen and (max-width: $breakpoints-tablette) {
-               font-size: medium;
+            font-size: medium;
             }
             @media screen and (max-width: $breakpoints-mobile) {
-               font-size: medium;  
+            font-size: medium;  
             } 
         }
-    }
-    /* Fin section localisation */
+    }// Fin section localisation 
     
-    /* Debut section presentation */
+    // Debut section presentation 
+
     .presentation {
         @extend %grid-center;
         @include grid-template-set ($presentation);
@@ -127,7 +125,7 @@ main{
             padding: 0 15px;
             font-size: x-large;
             @media screen and (max-width: $breakpoints-tablette) {
-               margin: 25px 25px 0;
+            margin: 25px 25px 0;
             }
             @media screen and (max-width: $breakpoints-mobile) { 
                 margin: 25px 50px 0 30px;   
@@ -138,15 +136,16 @@ main{
             padding: 20px 20px 30px;
             @media screen and (max-width: $breakpoints-tablette) {
                 font-size: large;
-             }
-             @media screen and (max-width: $breakpoints-mobile) { 
-                 font-size: large;   
-             } 
+            }
+            @media screen and (max-width: $breakpoints-mobile) { 
+                font-size: large;   
+            } 
         }
     }
-    /* Fin section presentation */
+    // Fin section presentation 
     
-    /* Debut section Fonctionnement */
+    // Debut section Fonctionnement 
+
     .operation {
         display: grid;
         margin: 60px 0;
@@ -214,9 +213,10 @@ main{
             }
         }
     }
-    /* Fin section fonctionnement */
+    // Fin section fonctionnement 
 
-    /* Début section restaurants */
+    // Début section restaurants
+
     .restaurants {
         @extend %grid-center;
         @include grid-template-set (1);
@@ -281,9 +281,10 @@ main{
             }
         }
     } 
-    /*Fin section restaurants */
+    // Fin section restaurants 
 
-     /* Début section menu */
+    // Debut section menu 
+
     .menu {
         @extend %grid-center;
         @include grid-template-set (1);
@@ -341,14 +342,14 @@ main{
             cursor: pointer;
             overflow: hidden;
             font-size: 16.5px;
-            animation: showingDishes 1000ms forwards;
+            animation: apparition 1000ms both;
             opacity: 0;
             @for $i from 1 to $nb-plats {
                 &--#{$i} {
                     animation-delay: calc(200ms * $i);
                 }
             }
-            @keyframes showingDishes {
+            @keyframes apparition {
                 0% {
                     transform: translateY(30px);
 
@@ -362,7 +363,13 @@ main{
         & .menu__list:hover, & .menu__list:active {
 
             & p {
-                width: 67%;
+                width: 60%;
+                @media screen and (max-width: $breakpoints-tablette) {
+                    width: 64%;
+                }
+                @media screen and (max-width: $breakpoints-mobile) {
+                    width: 67%;
+                }
             }
             & strong {
                 right: 102px;
@@ -411,13 +418,12 @@ main{
             transform: rotate(-1turn);
             transition: all 0.5s;
         }
-       
+    
         & a {
             padding: 15px 40px;
             justify-self: center;
         }
     }
-    /* Fin section menu */
-
+    // Fin section menu
 }
 

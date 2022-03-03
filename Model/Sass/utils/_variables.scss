@@ -16,9 +16,6 @@ $txt-fond-grisclair:#f6f6f6;
 $txt-fond-gris:#eaeaea;
 $txt-fond-vert: #008766;
 
-//Soulignement titre
-$border-titre: 48px;
-
 //Media queries 
 $breakpoints-tablette: 992px;
 $breakpoints-mobile:  690px;
@@ -41,3 +38,6 @@ $grid-columns-footer: 3;
 
 //Nombre de plats
 $nb-plats : 10;
+
+//Soulignement titre
+$border-titre: 48px;

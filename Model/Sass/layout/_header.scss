@@ -23,8 +23,9 @@ header {
     .btn__home{
         @include grid-pos-set(1, auto , 1, auto);
         justify-self: start;
+        color: $color-black;
     }
-    .fa-arrow-left:hover, .fa-arrow-left:active {
+    .btn__home:hover, .btn__home:active {
         color: $color-black;
     }
 }
