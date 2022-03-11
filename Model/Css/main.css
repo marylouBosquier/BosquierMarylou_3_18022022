@@ -536,40 +536,41 @@ main .menu ul {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-main .menu .menu__list {
+main .menu ul .menu__list {
   position: relative;
   padding: 15px;
   cursor: pointer;
   overflow: hidden;
   font-size: 16.5px;
+  background: white;
   animation: apparition 1000ms both;
   opacity: 0;
 }
-main .menu .menu__list--1 {
+main .menu ul .menu__list--1 {
   animation-delay: 200ms;
 }
-main .menu .menu__list--2 {
+main .menu ul .menu__list--2 {
   animation-delay: 400ms;
 }
-main .menu .menu__list--3 {
+main .menu ul .menu__list--3 {
   animation-delay: 600ms;
 }
-main .menu .menu__list--4 {
+main .menu ul .menu__list--4 {
   animation-delay: 800ms;
 }
-main .menu .menu__list--5 {
+main .menu ul .menu__list--5 {
   animation-delay: 1000ms;
 }
-main .menu .menu__list--6 {
+main .menu ul .menu__list--6 {
   animation-delay: 1200ms;
 }
-main .menu .menu__list--7 {
+main .menu ul .menu__list--7 {
   animation-delay: 1400ms;
 }
-main .menu .menu__list--8 {
+main .menu ul .menu__list--8 {
   animation-delay: 1600ms;
 }
-main .menu .menu__list--9 {
+main .menu ul .menu__list--9 {
   animation-delay: 1800ms;
 }
 @keyframes apparition {
@@ -581,33 +582,39 @@ main .menu .menu__list--9 {
     opacity: 1;
   }
 }
-main .menu .menu__list:hover p, main .menu .menu__list:active p {
+main .menu ul .menu__list:hover h4, main .menu ul .menu__list:active h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 75%;
+}
+main .menu ul .menu__list:hover p, main .menu ul .menu__list:active p {
   width: 60%;
 }
 @media screen and (max-width: 992px) {
-  main .menu .menu__list:hover p, main .menu .menu__list:active p {
-    width: 64%;
+  main .menu ul .menu__list:hover p, main .menu ul .menu__list:active p {
+    width: 55%;
   }
 }
 @media screen and (max-width: 690px) {
-  main .menu .menu__list:hover p, main .menu .menu__list:active p {
-    width: 67%;
+  main .menu ul .menu__list:hover p, main .menu ul .menu__list:active p {
+    width: 55%;
   }
 }
-main .menu .menu__list:hover strong, main .menu .menu__list:active strong {
+main .menu ul .menu__list:hover strong, main .menu ul .menu__list:active strong {
   right: 102px;
 }
-main .menu .menu__list:hover span, main .menu .menu__list:active span {
+main .menu ul .menu__list:hover span, main .menu ul .menu__list:active span {
   right: 0;
 }
-main .menu .menu__list:hover span i, main .menu .menu__list:active span i {
+main .menu ul .menu__list:hover span i, main .menu ul .menu__list:active span i {
   transform: rotate(0deg);
 }
-main .menu h4 {
+main .menu ul .menu__list h4 {
   margin: 0 0 8px 0;
-  font-size: 17.5px;
+  font-size: 1.1em;
 }
-main .menu p {
+main .menu ul .menu__list p {
   font-size: 16px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -615,14 +622,14 @@ main .menu p {
   overflow: hidden;
   transition: all 0.5s;
 }
-main .menu strong {
+main .menu ul .menu__list strong {
   position: absolute;
   right: 32px;
   bottom: 16px;
   font-weight: bold;
   transition: all 0.5s;
 }
-main .menu span {
+main .menu ul .menu__list span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -636,7 +643,7 @@ main .menu span {
   background: #99E2D0;
   transition: all 0.5s;
 }
-main .menu .fa-check-circle {
+main .menu ul .menu__list span .fa-check-circle {
   transform: rotate(-1turn);
   transition: all 0.5s;
 }
